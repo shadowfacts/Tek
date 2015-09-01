@@ -1,0 +1,15 @@
+# Items
+# Tools
+item.tek.multimeter.name=Multimeter
+item.tek.debug.name=Debugger
+
+# Miscellaneous
+
+
+# Blocks
+# Machines
+tile.tek.generator.charcoal.name=Charcoal Generator
+tile.tek.energyfurnace.name=Energized Furnace
+
+# Miscellaneous
+tile.tek.tray.name=Tray
