@@ -1,0 +1,35 @@
+package net.shadowfacts.tek.proxy;
+
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.Side;
+import net.shadowfacts.shadowmc.util.FMLLifecycleEventHandler;
+import net.shadowfacts.tek.Tek;
+import net.shadowfacts.tek.block.tray.TileEntityTray;
+import net.shadowfacts.tek.machine.furnace.TileEntityEnergyFurnace;
+import net.shadowfacts.tek.machine.generator.charcoal.TileEntityGeneratorCharcoal;
+import net.shadowfacts.tek.packet.ModPackets;
+import net.shadowfacts.tek.packet.PacketEnergyRequest;
+import net.shadowfacts.tek.packet.PacketEnergyResponse;
+
+/**
+ * @author shadowfacts
+ */
+public abstract class CommonProxy implements FMLLifecycleEventHandler {
+
+	@Override
+	public void preInit(FMLPreInitializationEvent event) {
+		registerTileEntities();
+		registerPackets();
+		registerRenderers();
+	}
+
+	private void registerTileEntities() {
+	}
+
+	private void registerPackets() {
+	}
+
+	abstract void registerRenderers();
+
+}
