@@ -25,6 +25,8 @@ public abstract class CommonProxy implements FMLLifecycleEventHandler {
 	}
 
 	private void registerTileEntities() {
+//		Machines
+		GameRegistry.registerTileEntity(TileEntityGeneratorCharcoal.class, Tek.blocks.generatorCharcoal.getName());
 	}
 
 	private void registerPackets() {
