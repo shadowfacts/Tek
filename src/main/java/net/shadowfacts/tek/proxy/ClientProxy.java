@@ -13,7 +13,16 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	void registerRenderers() {
+		registerTESRs();
+		registerISBRHs();
 	}
 
+	private void registerTESRs() {
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityTray.class, new TrayTESR());
+	}
+
+	private void registerISBRHs() {
+		RenderingRegistry.registerBlockHandler(TrayISBRH.RENDER_ID, new TrayISBRH());
+	}
 
 }
