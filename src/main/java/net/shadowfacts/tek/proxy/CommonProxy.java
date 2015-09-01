@@ -28,6 +28,8 @@ public abstract class CommonProxy implements FMLLifecycleEventHandler {
 	}
 
 	private void registerPackets() {
+		Tek.network.registerMessage(PacketEnergyRequest.Handler.class, PacketEnergyRequest.class, ModPackets.EnergyRequest, Side.SERVER);
+		Tek.network.registerMessage(PacketEnergyResponse.Handler.class, PacketEnergyResponse.class, ModPackets.EnergyResponse, Side.CLIENT);
 	}
 
 	abstract void registerRenderers();
